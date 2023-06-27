@@ -1,5 +1,46 @@
 using System.Data.SqlClient;
 using Dapper;
+namespace bd.Models;
+private static string ConnectionString= @"Server=localhost;DataBase=elecciones;Trusted_Connection=True;";
 public static class bd{
-
+    public static void eliminarCandidato(int idCandidato)
+    {
+        using (SqlConnection bd = new SqlConnection(ConnectionString))
+        {
+            string sql = "DELETE FROM candidato WHERE idCandidato = @idCandidato";
+            bd.Execute(sql, new {candidato=idCandidato});
+        }
+    }
+    public static void agregarCandidato(candidato can)
+    {
+        using (SqlConnection bd = new SqlConnection(ConnectionString))
+        {
+            string sql = "INSERT INTO candidato(idPartido, nombre, apellido, foto, fechaNacimiento, postulacion) VALUES ( @idPartido, @nombre, @apellido, @foto, @fechaNacimiento, @postulacion)";
+            bd.Execute(sql, new {@idPartido=can.idPartido, @nombre=can.nombre, @apellid=can.apellido, @foto=can.foto, @fechaNacimiento=can.fechaNacimiento, @postulacion=can.postulacion});
+        }
+    }
+    public static partido verInfoPartido(int idPartido){
+        partido partidoElegido;
+        using (SqlConnection db = new SqlConnection(ConnectionString)){
+            string sql = "SELECT * FROM partido WHERE partido=@pidPartido";
+            partidoElegido = db.QueryFirstOrDefault<partido>(sql, new { pidPartido = idPartido});
+        }
+        return partidoElegido;
+    }
+    public static candidato verInfoCandidato(int idCandidato){
+        candidato candidatoElegido;
+        using (SqlConnection db = new SqlConnection(ConnectionString)){
+            string sql = "SELECT * FROM candidato WHERE partido=@pidCandidato";
+            candidatoElegido = db.QueryFirstOrDefault<candidato>(sql, new { pidCandidato = idCandidato});
+        }
+        return candidatoElegido;
+    }
+    public static List<partido> listaPartidos(){
+        listaPartido List<partido>=new List???
+        using (SqlConnection db = new SqlConnection(ConnectionString)){
+            string sql = "SELECT * FROM partido";
+            listaPartido = db.QueryFirstOrDefault<partido>(sql, new { });
+        }
+        return listaPartido;
+    }
 }
