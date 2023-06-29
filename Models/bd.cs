@@ -1,8 +1,9 @@
 using System.Data.SqlClient;
 using Dapper;
-namespace bd.Models;
-private static string ConnectionString= @"Server=localhost;DataBase=elecciones;Trusted_Connection=True;";
+namespace TP6_VAZQUEZ.Models;
+
 public static class bd{
+    private static string ConnectionString= @"Server=localhost;DataBase=elecciones;Trusted_Connection=True;";
     public static void eliminarCandidato(int idCandidato)
     {
         using (SqlConnection bd = new SqlConnection(ConnectionString))
@@ -22,7 +23,7 @@ public static class bd{
     public static partido verInfoPartido(int idPartido){
         partido partidoElegido;
         using (SqlConnection db = new SqlConnection(ConnectionString)){
-            string sql = "SELECT * FROM partido WHERE partido=@pidPartido";
+            string sql = "SELECT * FROM partido WHERE idPartido=@pidPartido";
             partidoElegido = db.QueryFirstOrDefault<partido>(sql, new { pidPartido = idPartido});
         }
         return partidoElegido;
@@ -30,17 +31,25 @@ public static class bd{
     public static candidato verInfoCandidato(int idCandidato){
         candidato candidatoElegido;
         using (SqlConnection db = new SqlConnection(ConnectionString)){
-            string sql = "SELECT * FROM candidato WHERE partido=@pidCandidato";
+            string sql = "SELECT * FROM candidato WHERE idCandidato=@pidCandidato";
             candidatoElegido = db.QueryFirstOrDefault<candidato>(sql, new { pidCandidato = idCandidato});
         }
         return candidatoElegido;
     }
-    public static List<partido> listaPartidos(){
-        listaPartido List<partido>=new List???
+    public static List<partido> listarPartidos(){
+         List<partido>listaPartido=new List<partido>();
         using (SqlConnection db = new SqlConnection(ConnectionString)){
             string sql = "SELECT * FROM partido";
-            listaPartido = db.QueryFirstOrDefault<partido>(sql, new { });
+            listaPartido = db.Query<partido>(sql).ToList();
         }
         return listaPartido;
+    }
+    public static List<candidato> listarCandidatos(int idPartido){
+        List<candidato>listaCandidato=new List<candidato>();
+        using (SqlConnection db = new SqlConnection(ConnectionString)){
+            string sql = "SELECT * FROM candidato where idPartido=@pidPartido";
+            listaCandidato = db.Query<candidato>(sql, new { pidPartido = idPartido}).ToList();
+        }
+        return listaCandidato;
     }
 }
