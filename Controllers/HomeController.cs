@@ -16,10 +16,40 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewBag.listaPartido = bd.listarPartidos();
-        return View(Index);
+        return View("Index");
     }
     
-
+    public IActionResult verDetallePartido(int idPartido)
+    {
+        ViewBag.detallePartido= bd.verInfoPartido(idPartido);
+        ViewBag.listaCandidatos= bd.listarCandidatos(idPartido);
+        return View("detallePartido");
+    }
+    public IActionResult verDetalleCandidato(int idCandidato)
+    {
+        ViewBag.detalleCandidato= bd.verInfoCandidato(idCandidato);
+        return View("detalleCandidato");
+    }
+    public IActionResult agregarCandidato(int idPartido)
+    {
+        ViewBag.idPartido=idPartido;  
+        return View("agregarCandidato");
+    }
+    [HttpPost] IActionResult guardarCandidato(candidato can)
+    {
+        bd.agregarCandidato(can);
+        return RedirectToAction("verDetallePartido", new{can.idPartido});
+    }
+    public IActionResult eliminarCandidato(int idCandidato, int idPartido){
+        bd.eliminarCandidato(idCandidato);
+        return RedirectToAction("verDetallePartido", new{IDP=idPartido});
+    }
+    public IActionResult elecciones(){
+        return  View("elecciones");
+    }
+    public IActionResult creditos(){
+        return View("creditos");
+    }
     public IActionResult Privacy()
     {
         return View();
