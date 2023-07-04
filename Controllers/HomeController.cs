@@ -15,7 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.listaPartido = bd.listarPartidos();
+        ViewBag.listaPartidos = bd.listarPartidos();
         return View("Index");
     }
     

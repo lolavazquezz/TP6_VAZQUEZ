@@ -1,0 +1,4 @@
+@foreach (candidato item in ViewBag.listaCandidatos)
+{
+  <a href='@Url.Action("verDetalleCandidato", new {id= item.idCandidato})'><input type="button" value="Detalles"></a>
+}

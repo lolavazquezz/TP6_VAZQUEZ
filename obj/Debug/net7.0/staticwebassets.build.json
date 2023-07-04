@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CpvCahJZyaq6dZMuRyjsARP77uHL1ytEdZSZKvh6fuw=",
+  "Hash": "OdTygoE8PUrAJsxoQLDIVpzNKil+LYb6DBQOgThT9ig=",
   "Source": "TP6_VAZQUEZ",
   "BasePath": "_content/TP6_VAZQUEZ",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\imagenes\\bandera.png",
+      "SourceId": "TP6_VAZQUEZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\",
+      "BasePath": "_content/TP6_VAZQUEZ",
+      "RelativePath": "imagenes/bandera.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\bandera.png"
     },
     {
       "Identity": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\imagenes\\logo_libertad_avanza.png",
