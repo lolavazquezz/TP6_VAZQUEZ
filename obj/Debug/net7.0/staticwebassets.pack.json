@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets\\imagenes\\bandera.png"
     },
     {
-      "Id": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\imagenes\\logo_libertad_avanza.png",
-      "PackagePath": "staticwebassets\\imagenes\\logo_libertad_avanza.png"
-    },
-    {
       "Id": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

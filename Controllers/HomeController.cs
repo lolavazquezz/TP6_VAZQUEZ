@@ -35,14 +35,14 @@ public class HomeController : Controller
         ViewBag.idPartido=idPartido;
         return View("agregarCandidato");
     }
-    [HttpPost] IActionResult guardarCandidato(candidato can)
+    [HttpPost] public IActionResult guardarCandidato(candidato can)
     {
         bd.agregarCandidato(can);
         return RedirectToAction("verDetallePartido", new{can.idPartido});
     }
     public IActionResult eliminarCandidato(int idCandidato, int idPartido){
         bd.eliminarCandidato(idCandidato);
-        return RedirectToAction("verDetallePartido", new{IDP=idPartido});
+        return RedirectToAction("verDetallePartido", new{idPartido=idPartido});
     }
     public IActionResult elecciones(){
         return  View("elecciones");

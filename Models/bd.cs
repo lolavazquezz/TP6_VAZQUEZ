@@ -6,18 +6,18 @@ public static class bd{
     private static string ConnectionString= @"Server=localhost;DataBase=elecciones;Trusted_Connection=True;";
     public static void eliminarCandidato(int idCandidato)
     {
-        using (SqlConnection bd = new SqlConnection(ConnectionString))
+        using (SqlConnection db = new SqlConnection(ConnectionString))
         {
             string sql = "DELETE FROM candidato WHERE idCandidato = @idCandidato";
-            bd.Execute(sql, new {candidato=idCandidato});
+            db.Execute(sql, new {candidato=idCandidato});
         }
     }
     public static void agregarCandidato(candidato can)
     {
-        using (SqlConnection bd = new SqlConnection(ConnectionString))
+        using (SqlConnection db = new SqlConnection(ConnectionString))
         {
             string sql = "INSERT INTO candidato(idPartido, nombre, apellido, foto, fechaNacimiento, postulacion) VALUES ( @idPartido, @nombre, @apellido, @foto, @fechaNacimiento, @postulacion)";
-            bd.Execute(sql, new {@idPartido=can.idPartido, @nombre=can.nombre, @apellid=can.apellido, @foto=can.foto, @fechaNacimiento=can.fechaNacimiento, @postulacion=can.postulacion});
+            db.Execute(sql, new {@idPartido=can.idPartido, @nombre=can.nombre, @apellido=can.apellido, @foto=can.foto, @fechaNacimiento=can.fechaNacimiento, @postulacion=can.postulacion});
         }
     }
     public static partido verInfoPartido(int idPartido){

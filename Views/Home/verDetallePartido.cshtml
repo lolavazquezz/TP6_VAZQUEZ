@@ -1,6 +1,13 @@
-@ViewBag.detallePartido.idPartido
+
+  <img src="@ViewBag.detallePartido.logo">
+  <h1>@ViewBag.detallePartido.nombre</h1>
+  <p>Fecha de fundación: @ViewBag.detallePartido.fechaFundacion</p>
+  <p>Cantidad de diputados: @ViewBag.detallePartido.cantDiputados</p>
+  <p>Cantidad de senadores: @ViewBag.detallePartido.cantSenadores</p>
+  <a href="@ViewBag.detallePartido.sitioWeb" class="btn btn-secondary">Sitio Web</a>
+
 @foreach (candidato item in ViewBag.listaCandidatos)
 {
-  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})'><button>Detalles</button></a>
+  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})class="btn btn-secondary"'>Detalles</a>
 }
-<a href='@Url.Action("agregarCandidato", new {idPartido=item.idPartido})'><button>Agregar Candidato</button></a>
+<a href='@Url.Action("agregarCandidato", new {idPartido=ViewBag.detallePartido.idPartido})' class="btn btn-primary">Agregar Candidato</a>

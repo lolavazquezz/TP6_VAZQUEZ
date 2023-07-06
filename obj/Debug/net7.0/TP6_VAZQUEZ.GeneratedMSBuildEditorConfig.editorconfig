@@ -16,12 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = Z:\2023\PROGRAMACION\TP6_VAZQUEZ
 build_property._RazorSourceGeneratorDebug = 
 
+[Z:/2023/PROGRAMACION/TP6_VAZQUEZ/Views/Home/agregarCandidato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZ3JlZ2FyQ2FuZGlkYXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [Z:/2023/PROGRAMACION/TP6_VAZQUEZ/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [Z:/2023/PROGRAMACION/TP6_VAZQUEZ/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2023/PROGRAMACION/TP6_VAZQUEZ/Views/Home/verDetalleCandidato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx2ZXJEZXRhbGxlQ2FuZGlkYXRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [Z:/2023/PROGRAMACION/TP6_VAZQUEZ/Views/Home/verDetallePartido.cshtml]
