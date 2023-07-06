@@ -1,0 +1,14 @@
+<form method="post" action='@Url.Action("guardarCandidato")'>
+    <p>Nombre:</p> 
+    <input type="text" name="nombre" required>
+    <p>Apellido:</p> 
+    <input type="text" name="apellido" required>
+    <p>Fecha de Nacimiento:</p> 
+    <input type="DateTime" name="fechaNacimiento" required>
+    <p>Postulacion:</p> 
+    <input type="text" name="postulacion" required>
+    <p>Foto:</p> 
+    <input type="text" name="foto" required>
+    <input type="hidden" name="idPartido" value="idPartido">
+    <input type="subit" value="Guardar">
+</form>

@@ -1,4 +1,6 @@
+@ViewBag.detallePartido.idPartido
 @foreach (candidato item in ViewBag.listaCandidatos)
 {
-  <a href='@Url.Action("verDetalleCandidato", new {id= item.idCandidato})'><input type="button" value="Detalles"></a>
+  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})'><button>Detalles</button></a>
 }
+<a href='@Url.Action("agregarCandidato", new {idPartido=item.idPartido})'><button>Agregar Candidato</button></a>

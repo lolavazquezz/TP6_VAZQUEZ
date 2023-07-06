@@ -23,16 +23,16 @@ public class HomeController : Controller
     {
         ViewBag.detallePartido= bd.verInfoPartido(idPartido);
         ViewBag.listaCandidatos= bd.listarCandidatos(idPartido);
-        return View("detallePartido");
+        return View("verDetallePartido");
     }
     public IActionResult verDetalleCandidato(int idCandidato)
     {
         ViewBag.detalleCandidato= bd.verInfoCandidato(idCandidato);
-        return View("detalleCandidato");
+        return View("verDetalleCandidato");
     }
     public IActionResult agregarCandidato(int idPartido)
     {
-        ViewBag.idPartido=idPartido;  
+        ViewBag.idPartido=idPartido;
         return View("agregarCandidato");
     }
     [HttpPost] IActionResult guardarCandidato(candidato can)

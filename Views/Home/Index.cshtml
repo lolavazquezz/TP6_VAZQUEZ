@@ -13,5 +13,5 @@
 </div>!-->
 @foreach (partido item in ViewBag.listaPartidos)
 {
-  <a href='@Url.Action("verDetallePartido", new {id= item.idPartido})'><input type="button" value="Detalles"></a>
+  <a href='@Url.Action("verDetallePartido", new {idPartido= item.idPartido})'><input type="button" value="Detalles"></a>
 }
