@@ -1,2 +1,6 @@
-@ViewBag.detalleCandidato.idCandidato
-<a href='@Url.Action("verDetallePartido", new {idPartido=ViewBag.detalleCandidato.idPartido})'><button>Volver al partido</button></a>
+<h2>@ViewBag.detalleCandidato.nombre @ViewBag.detalleCandidato.apellido</h2>
+<img src=@ViewBag.detalleCandidato.foto>
+<h3>Postulación: @ViewBag.detalleCandidato.postulacion</h3>
+@ViewBag.detalleCandidato.fechaNacimiento
+<br>
+<a href='@Url.Action("verDetallePartido", new {idPartido=ViewBag.detalleCandidato.idPartido})' class="btn btn-primary">Volver</a>

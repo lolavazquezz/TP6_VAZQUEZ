@@ -1,13 +1,17 @@
 
-  <img src="@ViewBag.detallePartido.logo">
-  <h1>@ViewBag.detallePartido.nombre</h1>
-  <p>Fecha de fundación: @ViewBag.detallePartido.fechaFundacion</p>
-  <p>Cantidad de diputados: @ViewBag.detallePartido.cantDiputados</p>
-  <p>Cantidad de senadores: @ViewBag.detallePartido.cantSenadores</p>
-  <a href="@ViewBag.detallePartido.sitioWeb" class="btn btn-secondary">Sitio Web</a>
-
+<img src="@ViewBag.detallePartido.logo">
+<h1>@ViewBag.detallePartido.nombre</h1>
+<p>Fecha de fundación: @ViewBag.detallePartido.fechaFundacion</p>
+<p>Cantidad de diputados: @ViewBag.detallePartido.cantDiputados</p>
+<p>Cantidad de senadores: @ViewBag.detallePartido.cantSenadores</p>
+<a href="@ViewBag.detallePartido.sitioWeb" class="btn btn-secondary">Sitio Web</a>
+<a href='@Url.Action("agregarCandidato", new {idPartido=ViewBag.detallePartido.idPartido})' class="btn btn-primary">Agregar Candidato</a>
+<br>
 @foreach (candidato item in ViewBag.listaCandidatos)
 {
-  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})class="btn btn-secondary"'>Detalles</a>
+  <img src="@item.foto">
+  <h2>@item.nombre @item.apellido</h2>
+  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})' class="btn btn-success">Detalles</a>
 }
-<a href='@Url.Action("agregarCandidato", new {idPartido=ViewBag.detallePartido.idPartido})' class="btn btn-primary">Agregar Candidato</a>
+<br>
+  <a href='@Url.Action("index")' class="btn btn-primary">Volver</a>

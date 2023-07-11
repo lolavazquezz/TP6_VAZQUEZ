@@ -4,11 +4,11 @@
     <p>Apellido:</p> 
     <input type="text" name="apellido" required>
     <p>Fecha de Nacimiento:</p> 
-    <input type="DateTime" name="fechaNacimiento" required>
+    <input type="DateTime" name="fechaNacimiento" placeholder="dd/mm/aaaa" required>
     <p>Postulacion:</p> 
     <input type="text" name="postulacion" required>
     <p>Foto:</p> 
     <input type="text" name="foto" required>
-    <input type="hidden" name="idPartido" value="idPartido">
-    <input type="submit" value="Guardar" >
+    <input type="hidden" name="idPartido" value="@ViewBag.idPartido">
+    <input type="submit" value="Guardar" class="btn btn-primary" >
 </form>

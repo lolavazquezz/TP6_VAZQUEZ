@@ -13,7 +13,7 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult index()
     {
         ViewBag.listaPartidos = bd.listarPartidos();
         return View("Index");
