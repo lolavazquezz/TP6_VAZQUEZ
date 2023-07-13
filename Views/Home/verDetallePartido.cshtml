@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="site.css">
 <img src="@ViewBag.detallePartido.logo">
 <h1>@ViewBag.detallePartido.nombre</h1>
 <p>Fecha de fundación: @ViewBag.detallePartido.fechaFundacion</p>
@@ -11,7 +11,7 @@
 {
   <img src="@item.foto">
   <h2>@item.nombre @item.apellido</h2>
-  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})' class="btn btn-success">Detalles</a>
+  <a href='@Url.Action("verDetalleCandidato", new { idCandidato= item.idCandidato, idPartido=item.idPartido})' class="btn btn-secondary">Detalles</a>
 }
 <br>
   <a href='@Url.Action("index")' class="btn btn-primary">Volver</a>

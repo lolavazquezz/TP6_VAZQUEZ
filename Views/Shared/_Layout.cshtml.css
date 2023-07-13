@@ -9,3 +9,12 @@
 *{
   margin:0;
 }
+nav img{
+  width: 6%;
+  position: absolute;
+  left: 47%;
+}
+nav div{
+  float: right;
+  margin: 1.5%;
+}

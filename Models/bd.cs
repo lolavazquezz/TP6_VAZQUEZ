@@ -9,7 +9,7 @@ public static class bd{
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
             string sql = "DELETE FROM candidato WHERE idCandidato = @idCandidato";
-            db.Execute(sql, new {candidato=idCandidato});
+            db.Execute(sql, new {@idCandidato=idCandidato});
         }
     }
     public static void agregarCandidato(candidato can)

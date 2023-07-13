@@ -9,3 +9,12 @@ a[b-6tqdbp0ej3] {
 *[b-6tqdbp0ej3]{
   margin:0;
 }
+nav img[b-6tqdbp0ej3]{
+  width: 6%;
+  position: absolute;
+  left: 47%;
+}
+nav div[b-6tqdbp0ej3]{
+  float: right;
+  margin: 1.5%;
+}
