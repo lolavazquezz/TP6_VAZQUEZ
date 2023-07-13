@@ -1,6 +1,7 @@
 <h2>@ViewBag.detalleCandidato.nombre @ViewBag.detalleCandidato.apellido</h2>
 <img src=@ViewBag.detalleCandidato.foto>
 <h3>Postulación: @ViewBag.detalleCandidato.postulacion</h3>
-@ViewBag.detalleCandidato.fechaNacimiento
+<p>Fecha de nacimiento: @ViewBag.detalleCandidato.fechaNacimiento</p>
 <br>
 <a href='@Url.Action("verDetallePartido", new {idPartido=ViewBag.detalleCandidato.idPartido})' class="btn btn-primary">Volver</a>
+<a href='@Url.Action("eliminarCandidato", new {idPartido=ViewBag.detalleCandidato.idPartido}, idCandidato= detalleCandidato.idCandidato)'  class="btn btn-danger">Eliminar</a>
