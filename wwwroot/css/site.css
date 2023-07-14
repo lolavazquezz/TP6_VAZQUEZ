@@ -5,4 +5,16 @@
 .partidos{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 30%;
+    text-align: center;
+    padding-bottom: 2%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.partidos h2{
+    text-align: left;
+    margin:3%;
+}
+.form{
+    margin-top:50%;
 }

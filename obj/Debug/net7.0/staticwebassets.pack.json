@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\imagenes\\Thumbs.db",
+      "PackagePath": "staticwebassets\\imagenes\\Thumbs.db"
+    },
+    {
       "Id": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\imagenes\\bandera.png",
       "PackagePath": "staticwebassets\\imagenes\\bandera.png"
     },

@@ -1,10 +1,12 @@
 ﻿<link rel="stylesheet" href="site.css">
-<h1 style="clear:both">Partidos</h1>
-@foreach (partido item in ViewBag.listaPartidos)
-{
-  <div class="partidos">
-    <img class="logo" src="@item.logo">
-    <h2>@item.nombre</h2>  
-  <a href='@Url.Action("verDetallePartido", new {idPartido= item.idPartido})'class="btn btn-primary">Ver más</a>
-  </div>
-}
+<body>
+  <h1 style="clear:both">Partidos</h1>
+  @foreach (partido item in ViewBag.listaPartidos)
+  {
+    <div class="partidos">
+      <img class="logo" src="@item.logo">
+      <h2>@item.nombre</h2>  
+    <a href='@Url.Action("verDetallePartido", new {idPartido= item.idPartido})'class="btn btn-primary">Ver más</a>
+    </div>
+  }
+</body>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yBLsa+qLK+hDpe0vEAa232MDGgPZRnk3nlsGL7o4FWc=",
+  "Hash": "HOHsBN96zq1xl5fKagIVYgW44kLXGDpkzOiHOofW+pg=",
   "Source": "TP6_VAZQUEZ",
   "BasePath": "_content/TP6_VAZQUEZ",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\bandera.png"
+    },
+    {
+      "Identity": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\imagenes\\Thumbs.db",
+      "SourceId": "TP6_VAZQUEZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\",
+      "BasePath": "_content/TP6_VAZQUEZ",
+      "RelativePath": "imagenes/Thumbs.db",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Thumbs.db"
     },
     {
       "Identity": "Z:\\2023\\PROGRAMACION\\TP6_VAZQUEZ\\wwwroot\\js\\site.js",
